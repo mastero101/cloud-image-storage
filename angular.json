@@ -30,7 +30,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,
@@ -141,6 +144,16 @@
               "devServerTarget": "app:serve:ci"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "app:build:production",
+            "firebaseProject": "cloudstorage-ce57b",
+            "firebaseHostingSite": "cloudstorage-ce57b"
+          }
         }
       }
     }
@@ -148,7 +161,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "9f380d2d-801b-4496-963a-b0133909fc2e"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

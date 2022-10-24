@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Download</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input type="file" (change)="uploadImage($event)"></ion-input>
+    <ion-img [src]="image" *ngFor="let image of images" style="width: 400px;"></ion-img>
+    <ion-item-divider>
+      <ion-input id="delete" type="value" style="width: 50px;"></ion-input>
+    </ion-item-divider>
+  <ion-item-divider class="images">
+    <ion-button (click)="deleteImages()">Delete</ion-button>
+  </ion-item-divider>
+</ion-content>

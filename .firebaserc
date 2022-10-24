@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cloudstorage-ce57b": {
+      "hosting": {
+        "app": [
+          "cloudstorage-ce57b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cloudstorage-ce57b"
+  }
+}
